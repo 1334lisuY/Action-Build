@@ -16,7 +16,13 @@ Special handling is required for `OnePlus Ace5Pro (ColorOS)` and `OnePlus 13 (Co
 Remember to install the module with **volume down**.
  
 # Changelog
--- Remove the version code that may exist in the suffix of the configuration file and convert it to the corresponding Android version.  
+-- Remove potential version codes from the config file suffix written into `ak3.zip`; Indicate the precise source-based `Android` version `XX.X.X` in the support info.
+```
+Examples:
+AnyKernel3_SukiSUUltra_12896_oneplus_ace2pro_Android15.0.0_KPM_VFS.zip  
+AnyKernel3_SukiSUUltra_12896_oneplus_13_Android15.0.2_KPM_VFS.zip  
+AnyKernel3_SukiSUUltra_12896_oneplus_11_Android14.1.0_KPM_VFS.zip
+```
 -- Temporarily fixed the build issue for `OnePlus Ace5Pro` and `OnePlus 13` [@reigadegr](https://github.com/reigadegr)   
 
 -- Allow custom kernel suffix  <- **`beta`**
@@ -26,10 +32,6 @@ Remember to install the module with **volume down**.
 2. When custom suffix is enabled, the kernel version is modified to “x.xx.xxx-androidxx-[custom content]”, and the original “androidxx-8-o-g3b1e97b8b29f” is no longer retained.
 ```
 -- KPM is enabled by default and can no longer be disabled.  
--- Supports indicating the corresponding `Android` version from the source code in the `ak3.zip`
-```
-AnyKernel3_SukiSUUltra_12866_oneplus_ace2pro_Android15_KPM_VFS.zip
-```
 -- New `dir4` and `dir5` paths added to support `sm8750` and some devices with new paths when ZRAM is enabled (such as `ace2p`, `13T`). [@ShirkNeko](https://github.com/ShirkNeko)   
 
 -- Added support for the `LZ4K` compression algorithm in the `zram` module. [@ShirkNeko](https://github.com/ShirkNeko)   
